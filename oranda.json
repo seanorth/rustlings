@@ -15,8 +15,8 @@
       "auto": true,
       "package_managers": {
         "preferred": {
-          "macos/linux/unix": "curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash",
-          "windows": "Start-BitsTransfer -Source https://raw.githubusercontent.com/rust-lang/rustlings/main/install.ps1 -Destination $env:TMP/install_rustlings.ps1; Unblock-File $env:TMP/install_rustlings.ps1; Invoke-Expression $env:TMP/install_rustlings.ps1"
+          "macos/linux/unix": "curl -L https://github.com/seanorth/rustlings/blob/fd3f07532f332bd5a15af2d2dea7330781017048/install.sh | bash",
+          "windows": "Start-BitsTransfer -Source https://github.com/seanorth/rustlings/blob/fd3f07532f332bd5a15af2d2dea7330781017048/install.ps1 -Destination $env:TMP/install_rustlings.ps1; Unblock-File $env:TMP/install_rustlings.ps1; Invoke-Expression $env:TMP/install_rustlings.ps1"
         }
       }
     }
