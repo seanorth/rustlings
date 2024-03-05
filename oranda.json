@@ -1,7 +1,7 @@
 {
   "project": {
     "homepage": "https://rustlings.cool",
-    "repository": "https://github.com/rust-lang/rustlings"
+    "repository": "https://github.com/seanorth/rustlings"
   },
   "marketing": {
     "analytics": {
