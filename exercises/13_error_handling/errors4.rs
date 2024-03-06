@@ -17,9 +17,9 @@ impl PositiveNonzeroInteger {
     fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
         // Hmm... Why is this always returning an Ok value?
         match value {
-v if v>0 => {Ok(PositiveNonzeroInteger(v as u64))}
-            0 => {Err(CreationError::Zero)}
-            _ => Err(CreationError::Negative)
+            v if v>0 => Ok(PositiveNonzeroInteger(v as u64)),
+            0 => Err(CreationError::Zero),
+            _ => Err(CreationError::Negative),
 
         }
 
