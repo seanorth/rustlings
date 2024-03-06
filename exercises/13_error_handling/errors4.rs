@@ -3,7 +3,6 @@
 // Execute `rustlings hint errors4` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 #[derive(PartialEq, Debug)]
 struct PositiveNonzeroInteger(u64);
@@ -17,7 +16,13 @@ enum CreationError {
 impl PositiveNonzeroInteger {
     fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
         // Hmm... Why is this always returning an Ok value?
-        Ok(PositiveNonzeroInteger(value as u64))
+        match value {
+v if v>0 => {Ok(PositiveNonzeroInteger(v as u64))}
+            0 => {Err(CreationError::Zero)}
+            _ => Err(CreationError::Negative)
+
+        }
+
     }
 }
 
@@ -29,4 +34,23 @@ fn test_creation() {
         PositiveNonzeroInteger::new(-10)
     );
     assert_eq!(Err(CreationError::Zero), PositiveNonzeroInteger::new(0));
+}
+
+#[test]
+fn test_chatgpt(){
+    let num = -5;
+
+    let r=match num.cmp(&0) {
+        std::cmp::Ordering::Greater => {
+
+            "The number is greater than zero."
+        }
+        std::cmp::Ordering::Equal => {
+            "The number is equal to zero."
+        }
+        std::cmp::Ordering::Less => {
+            "The number is less than zero."
+        }
+    };
+    assert_eq!(r,"The number is less than zero.")
 }
