@@ -11,12 +11,18 @@ fn main() {
     let vec1 = fill_vec(&mut vec0);
 
     assert_eq!(*vec1, vec![22, 44, 66, 88]);
+    let n=3;
 }
 
 fn fill_vec(vec:&mut Vec<i32>) -> &mut Vec<i32> {
-    let mut vec = vec;
+    let vec = vec;
 
     vec.push(88);
 
     vec
+}
+
+#[test]
+fn test1(){
+//
 }
